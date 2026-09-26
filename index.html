@@ -3,46 +3,263 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Memory World Privacy Policy</title>
+<title>Privacy Policy – Memory World</title>
+<meta name="description" content="Privacy Policy for Memory World, a memory game for children. The app collects no personal information.">
+<meta name="robots" content="index, follow">
 <style>
-body { margin: 0; background: #FFF4E0; color: #2E2A5E;
-       font: 17px/1.55 -apple-system, "Segoe UI", Roboto, sans-serif; }
-main { max-width: 680px; margin: 0 auto; padding: 32px 16px 48px; }
-h1 { font-size: 30px; margin: 0 0 8px; }
-h2 { font-size: 20px; margin: 28px 0 6px; padding-top: 16px; border-top: 2px solid #EBD5A4; }
-p, li { margin: 4px 0; color: #2E2A5E; }
-ul { padding-left: 22px; }
-a { color: #2E2A5E; }
+:root {
+  --bg: #F7F5F0;
+  --surface: #FFFFFF;
+  --ink: #1F1D3A;
+  --muted: #5B5875;
+  --line: #E7E3D8;
+  --accent: #3B3486;
+  --accent-soft: #EEECFA;
+  --good: #1E7A4C;
+  --good-soft: #E6F4EC;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14131F;
+    --surface: #1D1C2B;
+    --ink: #ECEAF7;
+    --muted: #A9A6C2;
+    --line: #2E2C42;
+    --accent: #A9A2F5;
+    --accent-soft: #26244A;
+    --good: #7FD6A6;
+    --good-soft: #1A3328;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+
+header.site {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+header.site .inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--surface);
+  display: grid; place-items: center;
+  font-weight: 700; font-size: 17px;
+  flex-shrink: 0;
+}
+.brand { font-weight: 650; font-size: 16px; }
+.brand small { display: block; font-weight: 400; font-size: 13px; color: var(--muted); line-height: 1.3; }
+
+main { max-width: 760px; margin: 0 auto; padding: 40px 20px 24px; }
+
+.hero h1 {
+  font-size: clamp(28px, 5vw, 38px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+}
+.hero p.lead { font-size: 18px; color: var(--muted); margin: 0 0 16px; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.meta li {
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 550;
+}
+
+.summary {
+  margin: 32px 0;
+  padding: 20px 22px;
+  border-radius: 14px;
+  background: var(--good-soft);
+  border: 1px solid color-mix(in srgb, var(--good) 25%, transparent);
+}
+.summary h2 { margin: 0 0 10px; font-size: 16px; color: var(--good); border: 0; padding: 0; }
+.summary ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px 20px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.summary li { position: relative; padding-left: 26px; margin: 0; }
+.summary li::before {
+  content: "";
+  position: absolute; left: 0; top: 5px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--good);
+}
+.summary li::after {
+  content: "";
+  position: absolute; left: 5px; top: 8px;
+  width: 6px; height: 3px;
+  border-left: 2px solid var(--good-soft);
+  border-bottom: 2px solid var(--good-soft);
+  transform: rotate(-45deg);
+}
+
+nav.toc {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 8px;
+}
+nav.toc h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0 0 8px; border: 0; padding: 0; }
+nav.toc ol { margin: 0; padding-left: 20px; columns: 2 220px; column-gap: 24px; }
+nav.toc li { margin: 0; padding: 3px 0; break-inside: avoid; }
+nav.toc a { text-decoration: none; }
+nav.toc a:hover { text-decoration: underline; }
+
+section { padding-top: 28px; scroll-margin-top: 16px; }
+section h2 {
+  font-size: 21px;
+  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+section h2 .num { color: var(--muted); font-weight: 500; margin-right: 6px; }
+p { margin: 0 0 12px; }
+ul.plain { padding-left: 22px; margin: 0 0 12px; }
+ul.plain li { margin: 4px 0; }
+
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 22px;
+  display: grid;
+  gap: 10px 24px;
+  grid-template-columns: max-content 1fr;
+}
+.contact-card dt { color: var(--muted); font-size: 14px; }
+.contact-card dd { margin: 0; font-weight: 550; overflow-wrap: anywhere; }
+
+footer {
+  max-width: 760px;
+  margin: 40px auto 0;
+  padding: 20px 20px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .contact-card { grid-template-columns: 1fr; gap: 2px; }
+  .contact-card dd { margin-bottom: 8px; }
+}
+@media print {
+  header.site, nav.toc { display: none; }
+  body { background: #fff; color: #000; }
+}
 </style>
 </head>
 <body>
+
+<header class="site">
+  <div class="inner">
+    <div class="logo" aria-hidden="true">M</div>
+    <div class="brand">Memory World<small>by Krishna Developer</small></div>
+  </div>
+</header>
+
 <main>
-<h1>Privacy Policy</h1>
-<p>Memory World is a memory game for children. It is built to collect nothing.</p>
-<p>Effective date: 25 September 2026</p>
-<h2>What we collect</h2>
-<p>Nothing. Memory World does not collect, send or share any personal information.</p>
-<p>There are no accounts, no sign-in, no advertising, no analytics and no tracking.</p>
-<p>The app does not ask for the internet permission, so it cannot send data anywhere.</p>
-<h2>What stays on the device</h2>
-<p>To remember a child&#x27;s game, the app saves these on the device only:</p>
-<ul>
-<li>levels finished, stars and coins</li>
-<li>Daily Challenge and Daily Reward progress</li>
-<li>awards and simple play statistics (games played, play time today)</li>
-<li>settings such as sound and the daily play limit</li>
-</ul>
-<p>This information never leaves the device. Uninstalling the app deletes it.</p>
-<h2>Grown-up areas</h2>
-<p>Settings and the parent area sit behind a question for grown-ups.</p>
-<p>The app has no purchases today. If purchases are added later, they will also sit behind this question and this policy will be updated first.</p>
-<h2>Third-party services</h2>
-<p>None. The app uses open-source code libraries that run on the device only and do not collect data.</p>
-<h2>Changes</h2>
-<p>If this policy changes, the new version will be published with the app update and on the store listing, with a new effective date.</p>
-<h2>Contact</h2>
-<p>Questions about privacy: <a href="mailto:aksharsoft11@gmail.com">aksharsoft11@gmail.com</a></p>
-<p>Developer: Krishna Developer</p>
+  <div class="hero">
+    <h1>Privacy Policy</h1>
+    <p class="lead">Memory World is a memory game for children, built to collect nothing.</p>
+    <ul class="meta">
+      <li>Effective 25 September 2026</li>
+    </ul>
+  </div>
+
+  <div class="summary" role="note">
+    <h2>At a glance</h2>
+    <ul>
+      <li>No personal information collected</li>
+      <li>No accounts or sign-in</li>
+      <li>No ads, analytics or tracking</li>
+      <li>No internet permission</li>
+      <li>Progress stays on the device</li>
+      <li>Grown-up areas are protected</li>
+    </ul>
+  </div>
+
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#collect">What we collect</a></li>
+      <li><a href="#device">What stays on the device</a></li>
+      <li><a href="#grown-ups">Grown-up areas</a></li>
+      <li><a href="#third-party">Third-party services</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <section id="collect">
+    <h2><span class="num">1.</span>What we collect</h2>
+    <p>Nothing. Memory World does not collect, send or share any personal information.</p>
+    <p>There are no accounts, no sign-in, no advertising, no analytics and no tracking.</p>
+    <p>The app does not ask for the internet permission, so it cannot send data anywhere.</p>
+  </section>
+
+  <section id="device">
+    <h2><span class="num">2.</span>What stays on the device</h2>
+    <p>To remember a child&rsquo;s game, the app saves the following on the device only:</p>
+    <ul class="plain">
+      <li>Levels finished, stars and coins</li>
+      <li>Daily Challenge and Daily Reward progress</li>
+      <li>Awards and simple play statistics (games played, play time today)</li>
+      <li>Settings such as sound and the daily play limit</li>
+    </ul>
+    <p>This information never leaves the device. Uninstalling the app deletes it.</p>
+  </section>
+
+  <section id="grown-ups">
+    <h2><span class="num">3.</span>Grown-up areas</h2>
+    <p>Settings and the parent area sit behind a question for grown-ups.</p>
+    <p>The app has no purchases today. If purchases are added later, they will also sit behind this question and this policy will be updated first.</p>
+  </section>
+
+  <section id="third-party">
+    <h2><span class="num">4.</span>Third-party services</h2>
+    <p>None. The app uses open-source code libraries that run on the device only and do not collect data.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">5.</span>Changes to this policy</h2>
+    <p>If this policy changes, the new version will be published with the app update and on the store listing, with a new effective date.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">6.</span>Contact us</h2>
+    <p>If you have any questions about this policy or your child&rsquo;s privacy, please get in touch.</p>
+    <dl class="contact-card">
+      <dt>Email</dt>
+      <dd><a href="mailto:aksharsoft11@gmail.com">aksharsoft11@gmail.com</a></dd>
+      <dt>Developer</dt>
+      <dd>Krishna Developer</dd>
+    </dl>
+  </section>
 </main>
+
+<footer>
+  &copy; 2026 Krishna Developer. Memory World Privacy Policy.
+</footer>
+
 </body>
 </html>
